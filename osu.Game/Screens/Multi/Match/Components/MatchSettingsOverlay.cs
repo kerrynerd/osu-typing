@@ -114,7 +114,7 @@ namespace osu.Game.Screens.Multi.Match.Components
                                                     Padding = new MarginPadding { Right = field_padding / 2 },
                                                     Children = new[]
                                                     {
-                                                        new Section("Room name")
+                                                        new Section("房间名称")
                                                         {
                                                             Child = NameField = new SettingsTextBox
                                                             {
@@ -123,7 +123,7 @@ namespace osu.Game.Screens.Multi.Match.Components
                                                                 OnCommit = (sender, text) => apply(),
                                                             },
                                                         },
-                                                        new Section("Room visibility")
+                                                        new Section("房间可见性")
                                                         {
                                                             Alpha = disabled_alpha,
                                                             Child = AvailabilityPicker = new RoomAvailabilityPicker
@@ -131,7 +131,7 @@ namespace osu.Game.Screens.Multi.Match.Components
                                                                 Enabled = { Value = false }
                                                             },
                                                         },
-                                                        new Section("Game type")
+                                                        new Section("游戏类型")
                                                         {
                                                             Alpha = disabled_alpha,
                                                             Child = new FillFlowContainer
@@ -164,7 +164,7 @@ namespace osu.Game.Screens.Multi.Match.Components
                                                     Padding = new MarginPadding { Left = field_padding / 2 },
                                                     Children = new[]
                                                     {
-                                                        new Section("Max participants")
+                                                        new Section("人数上限")
                                                         {
                                                             Alpha = disabled_alpha,
                                                             Child = MaxParticipantsField = new SettingsNumberTextBox
@@ -175,7 +175,7 @@ namespace osu.Game.Screens.Multi.Match.Components
                                                                 OnCommit = (sender, text) => apply()
                                                             },
                                                         },
-                                                        new Section("Duration")
+                                                        new Section("持续时间")
                                                         {
                                                             Child = DurationField = new DurationDropdown
                                                             {
@@ -195,7 +195,7 @@ namespace osu.Game.Screens.Multi.Match.Components
                                                                 }
                                                             }
                                                         },
-                                                        new Section("Password (optional)")
+                                                        new Section("密码（可选）")
                                                         {
                                                             Alpha = disabled_alpha,
                                                             Child = new SettingsPasswordTextBox
@@ -390,7 +390,7 @@ namespace osu.Game.Screens.Multi.Match.Components
         {
             public CreateRoomButton()
             {
-                Text = "Create";
+                Text = "创建";
             }
 
             [BackgroundDependencyLoader]
@@ -411,7 +411,7 @@ namespace osu.Game.Screens.Multi.Match.Components
 
             protected override string GenerateItemText(TimeSpan item)
             {
-                return item.Humanize();
+                return item.Humanize(culture: System.Globalization.CultureInfo.GetCultureInfo("zh-CN"));
             }
         }
     }

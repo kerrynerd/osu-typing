@@ -61,25 +61,25 @@ namespace osu.Game.Tournament.Screens.Editors
                         {
                             new SettingsTextBox
                             {
-                                LabelText = "Name",
+                                LabelText = "名称",
                                 Width = 0.33f,
                                 Bindable = Model.Name
                             },
                             new SettingsTextBox
                             {
-                                LabelText = "Description",
+                                LabelText = "说明",
                                 Width = 0.33f,
                                 Bindable = Model.Description
                             },
                             new DateTextBox
                             {
-                                LabelText = "Start Time",
+                                LabelText = "开始时间",
                                 Width = 0.33f,
                                 Bindable = Model.StartDate
                             },
                             new SettingsSlider<int>
                             {
-                                LabelText = "Best of",
+                                LabelText = "总局数",
                                 Width = 0.33f,
                                 Bindable = Model.BestOf
                             },
@@ -87,7 +87,7 @@ namespace osu.Game.Tournament.Screens.Editors
                             {
                                 Width = 0.2f,
                                 Margin = new MarginPadding(10),
-                                Text = "Add beatmap",
+                                Text = "添加谱面",
                                 Action = () => beatmapEditor.CreateNew()
                             },
                             beatmapEditor
@@ -99,7 +99,7 @@ namespace osu.Game.Tournament.Screens.Editors
                         Origin = Anchor.CentreRight,
                         RelativeSizeAxes = Axes.None,
                         Width = 150,
-                        Text = "Delete Round",
+                        Text = "删除轮次",
                         Action = () =>
                         {
                             Expire();
@@ -185,14 +185,14 @@ namespace osu.Game.Tournament.Screens.Editors
                                 {
                                     new SettingsNumberBox
                                     {
-                                        LabelText = "Beatmap ID",
+                                        LabelText = "谱面 ID",
                                         RelativeSizeAxes = Axes.None,
                                         Width = 200,
                                         Bindable = beatmapId,
                                     },
                                     new SettingsTextBox
                                     {
-                                        LabelText = "Mods",
+                                        LabelText = "模组",
                                         RelativeSizeAxes = Axes.None,
                                         Width = 200,
                                         Bindable = mods,
@@ -209,7 +209,7 @@ namespace osu.Game.Tournament.Screens.Editors
                                 Origin = Anchor.CentreRight,
                                 RelativeSizeAxes = Axes.None,
                                 Width = 150,
-                                Text = "Delete Beatmap",
+                                Text = "删除谱面",
                                 Action = () =>
                                 {
                                     Expire();

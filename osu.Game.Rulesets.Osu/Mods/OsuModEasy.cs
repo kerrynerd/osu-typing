@@ -7,6 +7,6 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     public class OsuModEasy : ModEasy
     {
-        public override string Description => @"Larger circles, more forgiving HP drain, less accuracy required, and three lives!";
+        public override string Description => "圆圈更大、掉血更慢、判定更宽松，并拥有三条生命！";
     }
 }

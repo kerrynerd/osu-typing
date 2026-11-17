@@ -167,7 +167,7 @@ namespace osu.Game.Overlays.Settings
                 UpdateState();
             }
 
-            public string TooltipText => "Revert to default";
+            public string TooltipText => "恢复默认值";
 
             protected override bool OnMouseDown(MouseDownEvent e) => true;
 

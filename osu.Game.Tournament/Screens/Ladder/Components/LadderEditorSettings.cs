@@ -20,7 +20,7 @@ namespace osu.Game.Tournament.Screens.Ladder.Components
     {
         private const int padding = 10;
 
-        protected override string Title => @"ladder";
+        protected override string Title => "对阵表";
 
         private SettingsDropdown<TournamentRound> roundDropdown;
         private PlayerCheckbox losersCheckbox;
@@ -39,11 +39,11 @@ namespace osu.Game.Tournament.Screens.Ladder.Components
         {
             Children = new Drawable[]
             {
-                team1Dropdown = new SettingsTeamDropdown(ladderInfo.Teams) { LabelText = "Team 1" },
-                team2Dropdown = new SettingsTeamDropdown(ladderInfo.Teams) { LabelText = "Team 2" },
-                roundDropdown = new SettingsRoundDropdown(ladderInfo.Rounds) { LabelText = "Round" },
-                losersCheckbox = new PlayerCheckbox { LabelText = "Losers Bracket" },
-                dateTimeBox = new DateTextBox { LabelText = "Match Time" },
+                team1Dropdown = new SettingsTeamDropdown(ladderInfo.Teams) { LabelText = "队伍 1" },
+                team2Dropdown = new SettingsTeamDropdown(ladderInfo.Teams) { LabelText = "队伍 2" },
+                roundDropdown = new SettingsRoundDropdown(ladderInfo.Rounds) { LabelText = "轮次" },
+                losersCheckbox = new PlayerCheckbox { LabelText = "败者组" },
+                dateTimeBox = new DateTextBox { LabelText = "比赛时间" },
             };
 
             editorInfo.Selected.ValueChanged += selection =>

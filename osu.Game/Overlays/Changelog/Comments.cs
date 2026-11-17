@@ -61,19 +61,19 @@ namespace osu.Game.Overlays.Changelog
                 }
             };
 
-            text.AddParagraph("Got feedback?", t =>
+            text.AddParagraph("想提点建议？", t =>
             {
                 t.Colour = Color4.White;
                 t.Font = OsuFont.Default.With(italics: true, size: 20);
                 t.Padding = new MarginPadding { Bottom = 20 };
             });
 
-            text.AddParagraph("We would love to hear what you think of this update! ");
+            text.AddParagraph("我们期待听到你对本次更新的看法！");
             text.AddIcon(FontAwesome.Regular.GrinHearts);
 
-            text.AddParagraph("Please visit the ");
-            text.AddLink("web version", $"{build.Url}#comments");
-            text.AddText(" of this changelog to leave any comments.");
+            text.AddParagraph("请前往本次更新日志的");
+            text.AddLink("网页版", $"{build.Url}#comments");
+            text.AddText("发表评论。");
         }
     }
 }

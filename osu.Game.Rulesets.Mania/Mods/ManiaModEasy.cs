@@ -7,6 +7,6 @@ namespace osu.Game.Rulesets.Mania.Mods
 {
     public class ManiaModEasy : ModEasy
     {
-        public override string Description => @"More forgiving HP drain, less accuracy required, and three lives!";
+        public override string Description => "掉血更慢、判定更宽松，并拥有三条生命！";
     }
 }

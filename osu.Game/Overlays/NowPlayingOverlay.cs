@@ -104,7 +104,7 @@ namespace osu.Game.Overlays
                                     Position = new Vector2(0, 40),
                                     Font = OsuFont.GetFont(size: 25, italics: true),
                                     Colour = Color4.White,
-                                    Text = @"Nothing to play",
+                                    Text = "暂无可播放的音乐",
                                 },
                                 artist = new OsuSpriteText
                                 {
@@ -113,7 +113,7 @@ namespace osu.Game.Overlays
                                     Position = new Vector2(0, 45),
                                     Font = OsuFont.GetFont(size: 15, weight: FontWeight.Bold, italics: true),
                                     Colour = Color4.White,
-                                    Text = @"Nothing to play",
+                                    Text = "暂无可播放的音乐",
                                 },
                                 new Container
                                 {
@@ -258,8 +258,8 @@ namespace osu.Game.Overlays
                 {
                     if (beatmap?.Beatmap == null) //this is not needed if a placeholder exists
                     {
-                        title.Text = @"Nothing to play";
-                        artist.Text = @"Nothing to play";
+                        title.Text = "暂无可播放的音乐";
+                        artist.Text = "暂无可播放的音乐";
                     }
                     else
                     {

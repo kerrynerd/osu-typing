@@ -7,7 +7,7 @@ namespace osu.Game.Screens.Edit.Timing
     {
         public TimingScreen()
         {
-            Child = new ScreenWhiteBox.UnderConstructionMessage("Timing mode");
+            Child = new ScreenWhiteBox.UnderConstructionMessage("节拍模式");
         }
     }
 }

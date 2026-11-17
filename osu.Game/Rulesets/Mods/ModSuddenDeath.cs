@@ -12,11 +12,11 @@ namespace osu.Game.Rulesets.Mods
 {
     public abstract class ModSuddenDeath : Mod, IApplicableToScoreProcessor, IApplicableFailOverride
     {
-        public override string Name => "Sudden Death";
+        public override string Name => "突然死亡";
         public override string Acronym => "SD";
         public override IconUsage Icon => OsuIcon.ModSuddendeath;
         public override ModType Type => ModType.DifficultyIncrease;
-        public override string Description => "Miss and fail.";
+        public override string Description => "出现一次漏击即失败。";
         public override double ScoreMultiplier => 1;
         public override bool Ranked => true;
         public override Type[] IncompatibleMods => new[] { typeof(ModNoFail), typeof(ModRelax), typeof(ModAutoplay) };

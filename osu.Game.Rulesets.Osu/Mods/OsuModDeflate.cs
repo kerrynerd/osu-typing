@@ -7,13 +7,13 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     public class OsuModDeflate : OsuModeObjectScaleTween
     {
-        public override string Name => "Deflate";
+        public override string Name => "缩小";
 
         public override string Acronym => "DF";
 
         public override IconUsage Icon => FontAwesome.Solid.CompressArrowsAlt;
 
-        public override string Description => "Hit them at the right size!";
+        public override string Description => "在大小合适时击打！";
 
         protected override float StartScale => 2f;
     }

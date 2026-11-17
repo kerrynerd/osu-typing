@@ -250,18 +250,18 @@ namespace osu.Game.Overlays
             {
                 case GlobalAction.MusicPlay:
                     if (TogglePause())
-                        onScreenDisplay?.Display(new MusicControllerToast(IsPlaying ? "Play track" : "Pause track"));
+                        onScreenDisplay?.Display(new MusicControllerToast(IsPlaying ? "播放音乐" : "暂停音乐"));
                     return true;
 
                 case GlobalAction.MusicNext:
                     if (NextTrack())
-                        onScreenDisplay?.Display(new MusicControllerToast("Next track"));
+                        onScreenDisplay?.Display(new MusicControllerToast("下一首"));
 
                     return true;
 
                 case GlobalAction.MusicPrev:
                     if (PrevTrack())
-                        onScreenDisplay?.Display(new MusicControllerToast("Previous track"));
+                        onScreenDisplay?.Display(new MusicControllerToast("上一首"));
 
                     return true;
             }
@@ -274,7 +274,7 @@ namespace osu.Game.Overlays
         public class MusicControllerToast : Toast
         {
             public MusicControllerToast(string action)
-                : base("Music Playback", action, string.Empty)
+                : base("音乐播放", action, string.Empty)
             {
             }
         }

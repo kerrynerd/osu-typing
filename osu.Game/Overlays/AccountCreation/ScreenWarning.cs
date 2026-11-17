@@ -87,7 +87,7 @@ namespace osu.Game.Overlays.AccountCreation
                             Origin = Anchor.TopCentre,
                             Colour = Color4.Red,
                             Font = OsuFont.GetFont(size: 28, weight: FontWeight.Light),
-                            Text = "Warning! 注意！",
+                            Text = "注意！",
                         },
                         multiAccountExplanationText = new OsuTextFlowContainer(cp => cp.Font = cp.Font.With(size: 12))
                         {
@@ -96,13 +96,13 @@ namespace osu.Game.Overlays.AccountCreation
                         },
                         new SettingsButton
                         {
-                            Text = "Help, I can't access my account!",
+                            Text = "需要帮助，我无法登录自己的账号！",
                             Margin = new MarginPadding { Top = 50 },
                             Action = () => game?.OpenUrlExternally(help_centre_url)
                         },
                         new DangerousSettingsButton
                         {
-                            Text = "I understand. This account isn't for me.",
+                            Text = "我明白，这个账号不是我的。",
                             Action = () => this.Push(new ScreenEntry())
                         },
                         furtherAssistance = new LinkFlowContainer(cp => cp.Font = cp.Font.With(size: 12))
@@ -116,16 +116,16 @@ namespace osu.Game.Overlays.AccountCreation
                 }
             };
 
-            multiAccountExplanationText.AddText("Are you ");
+            multiAccountExplanationText.AddText("你是");
             multiAccountExplanationText.AddText(api.ProvidedUsername, cp => cp.Colour = colours.BlueLight);
-            multiAccountExplanationText.AddText("? osu! has a policy of ");
-            multiAccountExplanationText.AddText("one account per person!", cp => cp.Colour = colours.Yellow);
-            multiAccountExplanationText.AddText(" Please be aware that creating more than one account per person may result in ");
-            multiAccountExplanationText.AddText("permanent deactivation of accounts", cp => cp.Colour = colours.Yellow);
+            multiAccountExplanationText.AddText("吗？osu! 规定");
+            multiAccountExplanationText.AddText("每人只能拥有一个账号！", cp => cp.Colour = colours.Yellow);
+            multiAccountExplanationText.AddText("请注意，创建多个账号可能导致");
+            multiAccountExplanationText.AddText("账号被永久停用", cp => cp.Colour = colours.Yellow);
             multiAccountExplanationText.AddText(".");
 
-            furtherAssistance.AddText("Need further assistance? Contact us via our ");
-            furtherAssistance.AddLink("support system", help_centre_url);
+            furtherAssistance.AddText("需要更多帮助？请通过我们的");
+            furtherAssistance.AddLink("支持系统", help_centre_url);
             furtherAssistance.AddText(".");
         }
     }

@@ -56,7 +56,7 @@ namespace osu.Game.Overlays.Toolbar
             switch (state)
             {
                 default:
-                    Text = @"Guest";
+                    Text = "游客";
                     avatar.User = new User();
                     break;
 

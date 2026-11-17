@@ -275,7 +275,7 @@ namespace osu.Game
 
                 Ruleset.Value = first.Ruleset;
                 Beatmap.Value = BeatmapManager.GetWorkingBeatmap(first);
-            }, $"load {beatmap}", bypassScreenAllowChecks: true, targetScreen: typeof(PlaySongSelect));
+            }, $"加载 {beatmap}", bypassScreenAllowChecks: true, targetScreen: typeof(PlaySongSelect));
         }
 
         /// <summary>
@@ -317,7 +317,7 @@ namespace osu.Game
                 Beatmap.Value = BeatmapManager.GetWorkingBeatmap(databasedBeatmap);
 
                 menuScreen.Push(new ReplayPlayerLoader(databasedScore));
-            }, $"watch {databasedScoreInfo}", bypassScreenAllowChecks: true);
+            }, $"观看 {databasedScoreInfo} 的回放", bypassScreenAllowChecks: true);
         }
 
         protected virtual Loader CreateLoader() => new Loader();
@@ -364,7 +364,7 @@ namespace osu.Game
             {
                 notifications.Post(new SimpleNotification
                 {
-                    Text = $"Click here to {taskName}",
+                    Text = $"点击此处{taskName}",
                     Activated = () =>
                     {
                         performFromMainMenu(action, taskName, targetScreen, true);
@@ -639,7 +639,7 @@ namespace osu.Game
                     Schedule(() => notifications.Post(new SimpleNotification
                     {
                         Icon = entry.Level == LogLevel.Important ? FontAwesome.Solid.ExclamationCircle : FontAwesome.Solid.Bomb,
-                        Text = entry.Message + (entry.Exception != null && IsDeployedBuild ? "\n\nThis error has been automatically reported to the devs." : string.Empty),
+                        Text = entry.Message + (entry.Exception != null && IsDeployedBuild ? "\n\n此错误已自动报告给开发者。" : string.Empty),
                     }));
                 }
                 else if (recentLogCount == short_term_display_limit)
@@ -647,7 +647,7 @@ namespace osu.Game
                     Schedule(() => notifications.Post(new SimpleNotification
                     {
                         Icon = FontAwesome.Solid.EllipsisH,
-                        Text = "Subsequent messages have been logged. Click to view log files.",
+                        Text = "后续消息已记录，点击查看日志文件。",
                         Activated = () =>
                         {
                             Host.Storage.GetStorageForDirectory("logs").OpenInNativeExplorer();

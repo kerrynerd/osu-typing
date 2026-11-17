@@ -54,7 +54,7 @@ namespace osu.Game.Screens.Select
                 {
                     Anchor = Anchor.BottomRight,
                     Origin = Anchor.BottomRight,
-                    Text = @"Selected Mods",
+                    Text = "所选模组",
                     Alpha = 0,
                 },
             };

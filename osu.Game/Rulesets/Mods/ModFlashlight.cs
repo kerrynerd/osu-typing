@@ -26,11 +26,11 @@ namespace osu.Game.Rulesets.Mods
 {
     public abstract class ModFlashlight : Mod
     {
-        public override string Name => "Flashlight";
+        public override string Name => "手电筒";
         public override string Acronym => "FL";
         public override IconUsage Icon => OsuIcon.ModFlashlight;
         public override ModType Type => ModType.DifficultyIncrease;
-        public override string Description => "Restricted view area.";
+        public override string Description => "限制可见范围。";
         public override bool Ranked => true;
 
         internal ModFlashlight()

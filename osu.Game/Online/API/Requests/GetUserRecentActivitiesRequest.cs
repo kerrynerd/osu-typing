@@ -2,6 +2,7 @@
 // See the LICENCE file in the repository root for full licence text.
 
 using System.Collections.Generic;
+using System.ComponentModel;
 using osu.Game.Online.API.Requests.Responses;
 
 namespace osu.Game.Online.API.Requests
@@ -39,8 +40,11 @@ namespace osu.Game.Online.API.Requests
 
     public enum BeatmapApproval
     {
+        [Description("已上架")]
         Ranked,
+        [Description("已批准")]
         Approved,
+        [Description("已过审")]
         Qualified,
     }
 }

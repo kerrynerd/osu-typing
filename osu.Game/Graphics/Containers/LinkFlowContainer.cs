@@ -35,7 +35,7 @@ namespace osu.Game.Graphics.Containers
 
             showNotImplementedError = () => notifications?.Post(new SimpleNotification
             {
-                Text = @"This link type is not yet supported!",
+                Text = "暂不支持此类链接！",
                 Icon = FontAwesome.Solid.LifeRing,
             });
         }
@@ -78,7 +78,7 @@ namespace osu.Game.Graphics.Containers
         }
 
         public IEnumerable<Drawable> AddUserLink(User user, Action<SpriteText> creationParameters = null)
-            => createLink(AddText(user.Username, creationParameters), user.Username, null, LinkAction.OpenUserProfile, user.Id.ToString(), "View profile");
+            => createLink(AddText(user.Username, creationParameters), user.Username, null, LinkAction.OpenUserProfile, user.Id.ToString(), "查看个人资料");
 
         private IEnumerable<Drawable> createLink(IEnumerable<Drawable> drawables, string text, string url = null, LinkAction linkType = LinkAction.External, string linkArgument = null, string tooltipText = null, Action action = null)
         {

@@ -11,7 +11,7 @@ namespace osu.Game.Rulesets.Catch.Mods
 {
     public class CatchModHidden : ModHidden
     {
-        public override string Description => @"Play with fading fruits.";
+        public override string Description => "水果会逐渐消失。";
         public override double ScoreMultiplier => 1.06;
 
         private const double fade_out_offset_multiplier = 0.6;

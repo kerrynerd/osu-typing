@@ -15,11 +15,11 @@ namespace osu.Game.Rulesets.Mania.Mods
 {
     public class ManiaModRandom : Mod, IApplicableToBeatmap
     {
-        public override string Name => "Random";
+        public override string Name => "随机";
         public override string Acronym => "RD";
         public override ModType Type => ModType.Conversion;
         public override IconUsage Icon => OsuIcon.Dice;
-        public override string Description => @"Shuffle around the keys!";
+        public override string Description => "随机打乱音符所在的轨道！";
         public override double ScoreMultiplier => 1;
 
         public void ApplyToBeatmap(IBeatmap beatmap)

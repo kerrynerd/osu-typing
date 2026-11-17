@@ -52,21 +52,21 @@ namespace osu.Game.Tournament.Screens
             {
                 new ActionableInfo
                 {
-                    Label = "Current IPC source",
-                    ButtonText = "Refresh",
+                    Label = "当前 IPC 数据源",
+                    ButtonText = "刷新",
                     Action = () =>
                     {
                         fileBasedIpc?.LocateStableStorage();
                         reload();
                     },
-                    Value = fileBasedIpc?.Storage?.GetFullPath(string.Empty) ?? "Not found",
+                    Value = fileBasedIpc?.Storage?.GetFullPath(string.Empty) ?? "未找到",
                     Failing = fileBasedIpc?.Storage == null,
-                    Description = "The osu!stable installation which is currently being used as a data source. If a source is not found, make sure you have created an empty ipc.txt in your stable cutting-edge installation, and that it is registered as the default osu! install."
+                    Description = "当前用于提供数据的 osu! 稳定版安装。若未找到数据源，请确认已在 cutting-edge 版本目录中创建空的 ipc.txt，并将其注册为默认 osu! 安装。"
                 },
                 new ActionableInfo
                 {
-                    Label = "Current User",
-                    ButtonText = "Change Login",
+                    Label = "当前用户",
+                    ButtonText = "切换账号",
                     Action = () =>
                     {
                         api.Logout();
@@ -84,7 +84,7 @@ namespace osu.Game.Tournament.Screens
                     },
                     Value = api?.LocalUser.Value.Username,
                     Failing = api?.IsLoggedIn != true,
-                    Description = "In order to access the API and display metadata, a login is required."
+                    Description = "访问 API 和显示谱面信息需要先登录。"
                 }
             };
         }

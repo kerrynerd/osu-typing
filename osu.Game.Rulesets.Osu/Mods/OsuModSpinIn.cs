@@ -18,11 +18,11 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     public class OsuModSpinIn : Mod, IApplicableToDrawableHitObjects, IReadFromConfig
     {
-        public override string Name => "Spin In";
+        public override string Name => "旋转入场";
         public override string Acronym => "SI";
         public override IconUsage Icon => FontAwesome.Solid.Undo;
         public override ModType Type => ModType.Fun;
-        public override string Description => "Circles spin in. No approach circles.";
+        public override string Description => "圆圈旋转入场，不显示缩圈。";
         public override double ScoreMultiplier => 1;
 
         // todo: this mod should be able to be compatible with hidden with a bit of further implementation.

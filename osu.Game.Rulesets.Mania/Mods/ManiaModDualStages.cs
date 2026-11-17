@@ -9,9 +9,9 @@ namespace osu.Game.Rulesets.Mania.Mods
 {
     public class ManiaModDualStages : Mod, IPlayfieldTypeMod, IApplicableToBeatmapConverter
     {
-        public override string Name => "Dual Stages";
+        public override string Name => "双舞台";
         public override string Acronym => "DS";
-        public override string Description => @"Double the stages, double the fun!";
+        public override string Description => "双倍舞台，双倍乐趣！";
         public override ModType Type => ModType.Conversion;
         public override double ScoreMultiplier => 1;
 

@@ -79,11 +79,11 @@ namespace osu.Game.Screens.Edit
 
             if (RuntimeInfo.IsDesktop)
             {
-                fileMenuItems.Add(new EditorMenuItem("Export", MenuItemType.Standard, exportBeatmap));
+                fileMenuItems.Add(new EditorMenuItem("导出", MenuItemType.Standard, exportBeatmap));
                 fileMenuItems.Add(new EditorMenuItemSpacer());
             }
 
-            fileMenuItems.Add(new EditorMenuItem("Exit", MenuItemType.Standard, this.Exit));
+            fileMenuItems.Add(new EditorMenuItem("退出", MenuItemType.Standard, this.Exit));
 
             InternalChildren = new[]
             {
@@ -110,7 +110,7 @@ namespace osu.Game.Screens.Edit
                         RelativeSizeAxes = Axes.Both,
                         Items = new[]
                         {
-                            new MenuItem("File")
+                            new MenuItem("文件")
                             {
                                 Items = fileMenuItems
                             }

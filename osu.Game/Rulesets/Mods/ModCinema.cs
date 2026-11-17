@@ -8,10 +8,10 @@ namespace osu.Game.Rulesets.Mods
 {
     public class ModCinema : ModAutoplay
     {
-        public override string Name => "Cinema";
+        public override string Name => "影院";
         public override string Acronym => "CN";
         public override bool HasImplementation => false;
         public override IconUsage Icon => OsuIcon.ModCinema;
-        public override string Description => "Watch the video without visual distractions.";
+        public override string Description => "隐藏游戏物件，专心欣赏视频。";
     }
 }

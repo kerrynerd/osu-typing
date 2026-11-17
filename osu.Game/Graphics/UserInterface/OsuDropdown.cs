@@ -4,6 +4,8 @@
 using System.Linq;
 using osuTK.Graphics;
 using osu.Framework.Allocation;
+using osu.Framework.Configuration;
+using osu.Framework.Input;
 using osu.Framework.Extensions.Color4Extensions;
 using osu.Framework.Graphics;
 using osu.Framework.Graphics.Containers;
@@ -42,6 +44,44 @@ namespace osu.Game.Graphics.UserInterface
             if (Header is IHasAccentColour header) header.AccentColour = accentColour;
 
             if (Menu is IHasAccentColour menu) menu.AccentColour = accentColour;
+        }
+
+        protected override string GenerateItemText(T item)
+        {
+            // Framework enums have no game-specific display descriptions.
+            if (item is WindowMode windowMode)
+            {
+                switch (windowMode)
+                {
+                    case WindowMode.Windowed: return "窗口模式";
+                    case WindowMode.Borderless: return "无边框窗口";
+                    case WindowMode.Fullscreen: return "全屏";
+                }
+            }
+
+            if (item is FrameSync frameSync)
+            {
+                switch (frameSync)
+                {
+                    case FrameSync.VSync: return "垂直同步";
+                    case FrameSync.Limit2x: return "刷新率的 2 倍";
+                    case FrameSync.Limit4x: return "刷新率的 4 倍";
+                    case FrameSync.Limit8x: return "刷新率的 8 倍";
+                    case FrameSync.Unlimited: return "无限制";
+                }
+            }
+
+            if (item is ConfineMouseMode confineMouseMode)
+            {
+                switch (confineMouseMode)
+                {
+                    case ConfineMouseMode.Never: return "从不";
+                    case ConfineMouseMode.Fullscreen: return "仅全屏时";
+                    case ConfineMouseMode.Always: return "始终";
+                }
+            }
+
+            return base.GenerateItemText(item);
         }
 
         protected override DropdownHeader CreateHeader() => new OsuDropdownHeader();

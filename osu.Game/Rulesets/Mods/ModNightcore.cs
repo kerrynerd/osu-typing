@@ -10,10 +10,10 @@ namespace osu.Game.Rulesets.Mods
 {
     public abstract class ModNightcore : ModDoubleTime
     {
-        public override string Name => "Nightcore";
+        public override string Name => "升调加速";
         public override string Acronym => "NC";
         public override IconUsage Icon => OsuIcon.ModNightcore;
-        public override string Description => "Uguuuuuuuu...";
+        public override string Description => "感受高音与加速的节奏！";
 
         public override void ApplyToClock(IAdjustableClock clock)
         {

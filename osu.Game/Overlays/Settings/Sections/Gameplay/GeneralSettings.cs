@@ -10,7 +10,7 @@ namespace osu.Game.Overlays.Settings.Sections.Gameplay
 {
     public class GeneralSettings : SettingsSubsection
     {
-        protected override string Header => "General";
+        protected override string Header => "常规";
 
         [BackgroundDependencyLoader]
         private void load(OsuConfigManager config)
@@ -19,39 +19,39 @@ namespace osu.Game.Overlays.Settings.Sections.Gameplay
             {
                 new SettingsSlider<double>
                 {
-                    LabelText = "Background dim",
+                    LabelText = "背景暗化",
                     Bindable = config.GetBindable<double>(OsuSetting.DimLevel),
                     KeyboardStep = 0.01f
                 },
                 new SettingsSlider<double>
                 {
-                    LabelText = "Background blur",
+                    LabelText = "背景模糊",
                     Bindable = config.GetBindable<double>(OsuSetting.BlurLevel),
                     KeyboardStep = 0.01f
                 },
                 new SettingsCheckbox
                 {
-                    LabelText = "Show score overlay",
+                    LabelText = "显示分数面板",
                     Bindable = config.GetBindable<bool>(OsuSetting.ShowInterface)
                 },
                 new SettingsCheckbox
                 {
-                    LabelText = "Show health display even when you can't fail",
+                    LabelText = "即使不会失败也显示生命条",
                     Bindable = config.GetBindable<bool>(OsuSetting.ShowHealthDisplayWhenCantFail),
                 },
                 new SettingsCheckbox
                 {
-                    LabelText = "Always show key overlay",
+                    LabelText = "始终显示按键面板",
                     Bindable = config.GetBindable<bool>(OsuSetting.KeyOverlay)
                 },
                 new SettingsEnumDropdown<ScoreMeterType>
                 {
-                    LabelText = "Score meter type",
+                    LabelText = "误差条类型",
                     Bindable = config.GetBindable<ScoreMeterType>(OsuSetting.ScoreMeter)
                 },
                 new SettingsEnumDropdown<ScoringMode>
                 {
-                    LabelText = "Score display mode",
+                    LabelText = "分数显示模式",
                     Bindable = config.GetBindable<ScoringMode>(OsuSetting.ScoreDisplayMode)
                 }
             };

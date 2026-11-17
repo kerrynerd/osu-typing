@@ -124,7 +124,7 @@ namespace osu.Game.Graphics
 
                 notificationOverlay.Post(new SimpleNotification
                 {
-                    Text = $"{fileName} saved!",
+                    Text = $"已保存 {fileName}！",
                     Activated = () =>
                     {
                         storage.OpenInNativeExplorer();

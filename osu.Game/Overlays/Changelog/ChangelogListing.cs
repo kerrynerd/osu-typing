@@ -50,7 +50,7 @@ namespace osu.Game.Overlays.Changelog
                         Anchor = Anchor.TopCentre,
                         Origin = Anchor.TopCentre,
                         Margin = new MarginPadding { Top = 15 },
-                        Text = build.CreatedAt.Date.ToString("dd MMM yyyy"),
+                        Text = build.CreatedAt.Date.ToString("yyyy年M月d日"),
                         Font = OsuFont.GetFont(weight: FontWeight.Regular, size: 24),
                         Colour = OsuColour.FromHex(@"FD5"),
                     });

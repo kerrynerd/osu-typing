@@ -14,18 +14,18 @@ namespace osu.Game.Users
 
         public class Modding : UserActivity
         {
-            public override string Status => "Modding a map";
+            public override string Status => "正在摸图";
             public override Color4 GetAppropriateColour(OsuColour colours) => colours.PurpleDark;
         }
 
         public class ChoosingBeatmap : UserActivity
         {
-            public override string Status => "Choosing a beatmap";
+            public override string Status => "正在选择谱面";
         }
 
         public class MultiplayerGame : UserActivity
         {
-            public override string Status => "Playing with others";
+            public override string Status => "正在进行多人游戏";
         }
 
         public class Editing : UserActivity
@@ -37,7 +37,7 @@ namespace osu.Game.Users
                 Beatmap = info;
             }
 
-            public override string Status => @"Editing a beatmap";
+            public override string Status => "正在编辑谱面";
         }
 
         public class SoloGame : UserActivity
@@ -52,17 +52,17 @@ namespace osu.Game.Users
                 Ruleset = ruleset;
             }
 
-            public override string Status => @"Playing alone";
+            public override string Status => "正在单人游玩";
         }
 
         public class Spectating : UserActivity
         {
-            public override string Status => @"Spectating a game";
+            public override string Status => "正在观战";
         }
 
         public class InLobby : UserActivity
         {
-            public override string Status => @"In a Multiplayer Lobby";
+            public override string Status => "在多人游戏大厅";
         }
     }
 }

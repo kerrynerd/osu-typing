@@ -16,11 +16,11 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     public class OsuModAutopilot : Mod, IApplicableFailOverride, IUpdatableByPlayfield, IApplicableToDrawableRuleset<OsuHitObject>
     {
-        public override string Name => "Autopilot";
+        public override string Name => "自动移动";
         public override string Acronym => "AP";
         public override IconUsage Icon => OsuIcon.ModAutopilot;
         public override ModType Type => ModType.Automation;
-        public override string Description => @"Automatic cursor movement - just follow the rhythm.";
+        public override string Description => "光标自动移动，你只需跟随节奏敲击。";
         public override double ScoreMultiplier => 1;
         public override Type[] IncompatibleMods => new[] { typeof(OsuModSpunOut), typeof(ModRelax), typeof(ModSuddenDeath), typeof(ModNoFail), typeof(ModAutoplay) };
 

@@ -10,7 +10,7 @@ namespace osu.Game.Screens.Play.PlayerSettings
 {
     public class CollectionSettings : PlayerSettingsGroup
     {
-        protected override string Title => @"collections";
+        protected override string Title => "收藏夹";
 
         [BackgroundDependencyLoader]
         private void load()
@@ -19,7 +19,7 @@ namespace osu.Game.Screens.Play.PlayerSettings
             {
                 new OsuSpriteText
                 {
-                    Text = @"Add current song to",
+                    Text = "将当前歌曲添加到",
                 },
                 new CollectionsDropdown<PlaylistCollection>
                 {

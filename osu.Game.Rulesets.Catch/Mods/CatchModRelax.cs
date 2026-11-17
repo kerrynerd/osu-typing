@@ -7,6 +7,6 @@ namespace osu.Game.Rulesets.Catch.Mods
 {
     public class CatchModRelax : ModRelax
     {
-        public override string Description => @"Use the mouse to control the catcher.";
+        public override string Description => "使用鼠标控制接水果角色。";
     }
 }

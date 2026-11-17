@@ -7,10 +7,10 @@ namespace osu.Game.Configuration
 {
     public enum RandomSelectAlgorithm
     {
-        [Description("Never repeat")]
+        [Description("不重复选择")]
         RandomPermutation,
 
-        [Description("Random")]
+        [Description("完全随机")]
         Random
     }
 }

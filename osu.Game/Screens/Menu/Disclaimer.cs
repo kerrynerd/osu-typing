@@ -87,20 +87,20 @@ namespace osu.Game.Screens.Menu
                 }
             };
 
-            textFlow.AddText("This is an ", t => t.Font = t.Font.With(Typeface.Exo, 30, FontWeight.Light));
-            textFlow.AddText("early development build", t => t.Font = t.Font.With(Typeface.Exo, 30, FontWeight.SemiBold));
+            textFlow.AddText("这是一个", t => t.Font = t.Font.With(Typeface.Exo, 30, FontWeight.Light));
+            textFlow.AddText("早期开发版本", t => t.Font = t.Font.With(Typeface.Exo, 30, FontWeight.SemiBold));
 
-            textFlow.AddParagraph("Things may not work as expected", t => t.Font = t.Font.With(size: 20));
+            textFlow.AddParagraph("部分功能可能无法正常运行", t => t.Font = t.Font.With(size: 20));
             textFlow.NewParagraph();
 
             Action<SpriteText> format = t => t.Font = OsuFont.GetFont(size: 15, weight: FontWeight.SemiBold);
 
-            textFlow.AddParagraph("Detailed bug reports are welcomed via github issues.", format);
+            textFlow.AddParagraph("欢迎通过 GitHub Issues 提交详细的问题报告。", format);
             textFlow.NewParagraph();
 
-            textFlow.AddText("Visit ", format);
+            textFlow.AddText("访问", format);
             textFlow.AddLink("discord.gg/ppy", "https://discord.gg/ppy", creationParameters: format);
-            textFlow.AddText(" to help out or follow progress!", format);
+            textFlow.AddText("参与开发或了解进展！", format);
 
             textFlow.NewParagraph();
             textFlow.NewParagraph();
@@ -115,13 +115,13 @@ namespace osu.Game.Screens.Menu
 
                 if (e.NewValue.IsSupporter)
                 {
-                    supportFlow.AddText("Thank you for supporting osu!", format);
+                    supportFlow.AddText("感谢你支持 osu!", format);
                 }
                 else
                 {
-                    supportFlow.AddText("Consider becoming an ", format);
+                    supportFlow.AddText("欢迎成为", format);
                     supportFlow.AddLink("osu!supporter", "https://osu.ppy.sh/home/support", creationParameters: format);
-                    supportFlow.AddText(" to help support the game", format);
+                    supportFlow.AddText("，支持游戏的发展", format);
                 }
 
                 heart = supportFlow.AddIcon(FontAwesome.Solid.Heart, t =>

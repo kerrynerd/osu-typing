@@ -18,7 +18,6 @@ using System.Linq;
 using osu.Framework.Input.Bindings;
 using osu.Framework.Input.Events;
 using osu.Game.Input.Bindings;
-using Humanizer;
 using osu.Framework.Graphics.Effects;
 
 namespace osu.Game.Screens.Play
@@ -273,28 +272,25 @@ namespace osu.Game.Screens.Play
 
         private void updateRetryCount()
         {
-            // "You've retried 1,065 times in this session"
-            // "You've retried 1 time in this session"
-
             retryCounterContainer.Children = new Drawable[]
             {
                 new OsuSpriteText
                 {
-                    Text = "You've retried ",
+                    Text = "本次已重试",
                     Shadow = true,
                     ShadowColour = new Color4(0, 0, 0, 0.25f),
                     Font = OsuFont.GetFont(size: 18),
                 },
                 new OsuSpriteText
                 {
-                    Text = "time".ToQuantity(retries),
+                    Text = retries.ToString("N0"),
                     Font = OsuFont.GetFont(weight: FontWeight.Bold, size: 18),
                     Shadow = true,
                     ShadowColour = new Color4(0, 0, 0, 0.25f),
                 },
                 new OsuSpriteText
                 {
-                    Text = " in this session",
+                    Text = "次",
                     Shadow = true,
                     ShadowColour = new Color4(0, 0, 0, 0.25f),
                     Font = OsuFont.GetFont(size: 18),

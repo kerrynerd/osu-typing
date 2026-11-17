@@ -62,14 +62,14 @@ namespace osu.Desktop.Updater
                 }
 
                 notification.Progress = 0;
-                notification.Text = @"Downloading update...";
+                notification.Text = "正在下载更新……";
 
                 try
                 {
                     await updateManager.DownloadReleases(info.ReleasesToApply, p => notification.Progress = p / 100f);
 
                     notification.Progress = 0;
-                    notification.Text = @"Installing update...";
+                    notification.Text = "正在安装更新……";
 
                     await updateManager.ApplyReleases(info, p => notification.Progress = p / 100f);
 
@@ -127,7 +127,7 @@ namespace osu.Desktop.Updater
             {
                 return new ProgressCompletionNotification
                 {
-                    Text = @"Update ready to install. Click to restart!",
+                    Text = "更新已就绪，点击重新启动！",
                     Activated = () =>
                     {
                         updateManager.PrepareUpdateAsync()

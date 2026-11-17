@@ -10,7 +10,7 @@ namespace osu.Game.Overlays.Settings.Sections.Gameplay
 {
     public class SongSelectSettings : SettingsSubsection
     {
-        protected override string Header => "Song Select";
+        protected override string Header => "选曲";
 
         [BackgroundDependencyLoader]
         private void load(OsuConfigManager config)
@@ -19,29 +19,29 @@ namespace osu.Game.Overlays.Settings.Sections.Gameplay
             {
                 new SettingsCheckbox
                 {
-                    LabelText = "Right mouse drag to absolute scroll",
+                    LabelText = "按住鼠标右键拖动以定位列表",
                     Bindable = config.GetBindable<bool>(OsuSetting.SongSelectRightMouseScroll),
                 },
                 new SettingsCheckbox
                 {
-                    LabelText = "Show converted beatmaps",
+                    LabelText = "显示转换谱面",
                     Bindable = config.GetBindable<bool>(OsuSetting.ShowConvertedBeatmaps),
                 },
                 new SettingsSlider<double, StarSlider>
                 {
-                    LabelText = "Display beatmaps from",
+                    LabelText = "显示谱面的最低星级",
                     Bindable = config.GetBindable<double>(OsuSetting.DisplayStarsMinimum),
                     KeyboardStep = 0.1f
                 },
                 new SettingsSlider<double, StarSlider>
                 {
-                    LabelText = "up to",
+                    LabelText = "最高星级",
                     Bindable = config.GetBindable<double>(OsuSetting.DisplayStarsMaximum),
                     KeyboardStep = 0.1f
                 },
                 new SettingsEnumDropdown<RandomSelectAlgorithm>
                 {
-                    LabelText = "Random selection algorithm",
+                    LabelText = "随机选曲方式",
                     Bindable = config.GetBindable<RandomSelectAlgorithm>(OsuSetting.RandomSelectAlgorithm),
                 }
             };
@@ -49,7 +49,7 @@ namespace osu.Game.Overlays.Settings.Sections.Gameplay
 
         private class StarSlider : OsuSliderBar<double>
         {
-            public override string TooltipText => Current.Value.ToString(@"0.## stars");
+            public override string TooltipText => Current.Value.ToString("0.## 星");
         }
     }
 }

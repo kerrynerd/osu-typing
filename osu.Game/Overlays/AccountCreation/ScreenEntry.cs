@@ -65,11 +65,11 @@ namespace osu.Game.Overlays.AccountCreation
                             Anchor = Anchor.TopCentre,
                             Origin = Anchor.TopCentre,
                             Font = OsuFont.GetFont(size: 20),
-                            Text = "Let's create an account!",
+                            Text = "创建一个账号吧！",
                         },
                         usernameTextBox = new OsuTextBox
                         {
-                            PlaceholderText = "username",
+                            PlaceholderText = "用户名",
                             RelativeSizeAxes = Axes.X,
                             TabbableContentContainer = this
                         },
@@ -80,7 +80,7 @@ namespace osu.Game.Overlays.AccountCreation
                         },
                         emailTextBox = new OsuTextBox
                         {
-                            PlaceholderText = "email address",
+                            PlaceholderText = "电子邮箱",
                             RelativeSizeAxes = Axes.X,
                             TabbableContentContainer = this
                         },
@@ -91,7 +91,7 @@ namespace osu.Game.Overlays.AccountCreation
                         },
                         passwordTextBox = new OsuPasswordTextBox
                         {
-                            PlaceholderText = "password",
+                            PlaceholderText = "密码",
                             RelativeSizeAxes = Axes.X,
                             TabbableContentContainer = this,
                         },
@@ -112,7 +112,7 @@ namespace osu.Game.Overlays.AccountCreation
                                     AutoSizeAxes = Axes.Y,
                                     Child = new SettingsButton
                                     {
-                                        Text = "Register",
+                                        Text = "注册",
                                         Margin = new MarginPadding { Vertical = 20 },
                                         Action = performRegistration
                                     }
@@ -126,14 +126,14 @@ namespace osu.Game.Overlays.AccountCreation
 
             textboxes = new[] { usernameTextBox, emailTextBox, passwordTextBox };
 
-            usernameDescription.AddText("This will be your public presence. No profanity, no impersonation. Avoid exposing your own personal details, too!");
+            usernameDescription.AddText("这是你对外展示的名称。请勿使用不雅词语或冒充他人，也请避免透露个人隐私。");
 
-            emailAddressDescription.AddText("Will be used for notifications, account verification and in the case you forget your password. No spam, ever.");
-            emailAddressDescription.AddText(" Make sure to get it right!", cp => cp.Font = cp.Font.With(Typeface.Exo, weight: FontWeight.Bold));
+            emailAddressDescription.AddText("用于通知、账号验证和密码找回，绝不会发送垃圾邮件。");
+            emailAddressDescription.AddText("请确保填写正确！", cp => cp.Font = cp.Font.With(Typeface.Exo, weight: FontWeight.Bold));
 
-            passwordDescription.AddText("At least ");
-            characterCheckText = passwordDescription.AddText("8 characters long");
-            passwordDescription.AddText(". Choose something long but also something you will remember, like a line from your favourite song.");
+            passwordDescription.AddText("密码至少需要");
+            characterCheckText = passwordDescription.AddText("8 个字符");
+            passwordDescription.AddText("。请使用较长且容易记住的密码，例如你喜欢的歌词。");
 
             passwordTextBox.Current.ValueChanged += password => { characterCheckText.ForEach(s => s.Colour = password.NewValue.Length == 0 ? Color4.White : Interpolation.ValueAt(password.NewValue.Length, Color4.OrangeRed, Color4.YellowGreen, 0, 8, Easing.In)); };
         }
@@ -193,7 +193,7 @@ namespace osu.Game.Overlays.AccountCreation
                         }
                         else
                         {
-                            passwordDescription.AddErrors(new[] { "Something happened... but we're not sure what." });
+                            passwordDescription.AddErrors(new[] { "发生了未知错误，请稍后重试。" });
                         }
 
                         registerShake.Shake();

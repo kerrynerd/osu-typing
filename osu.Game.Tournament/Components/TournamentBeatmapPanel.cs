@@ -96,7 +96,7 @@ namespace osu.Game.Tournament.Components
                             {
                                 new OsuSpriteText
                                 {
-                                    Text = "mapper",
+                                    Text = "谱师",
                                     Padding = new MarginPadding { Right = 5 },
                                     Font = OsuFont.GetFont(italics: true, weight: FontWeight.Regular, size: 14)
                                 },
@@ -108,7 +108,7 @@ namespace osu.Game.Tournament.Components
                                 },
                                 new OsuSpriteText
                                 {
-                                    Text = "difficulty",
+                                    Text = "难度",
                                     Padding = new MarginPadding { Right = 5 },
                                     Font = OsuFont.GetFont(italics: true, weight: FontWeight.Regular, size: 14)
                                 },

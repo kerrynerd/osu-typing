@@ -9,9 +9,9 @@ namespace osu.Game.Rulesets.Mods
 {
     public class ModWindUp : ModTimeRamp
     {
-        public override string Name => "Wind Up";
+        public override string Name => "渐快";
         public override string Acronym => "WU";
-        public override string Description => "Can you keep up?";
+        public override string Description => "速度越来越快，你跟得上吗？";
         public override IconUsage Icon => FontAwesome.Solid.ChevronCircleUp;
         public override double ScoreMultiplier => 1.0;
 

@@ -31,7 +31,7 @@ namespace osu.Game.Graphics.UserInterface
                 }
             });
 
-            PlaceholderText = "type to search";
+            PlaceholderText = "输入关键词搜索";
         }
 
         public override bool OnPressed(PlatformAction action)

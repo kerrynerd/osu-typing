@@ -10,11 +10,11 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     public class OsuModSpunOut : Mod
     {
-        public override string Name => "Spun Out";
+        public override string Name => "自动转盘";
         public override string Acronym => "SO";
         public override IconUsage Icon => OsuIcon.ModSpunout;
         public override ModType Type => ModType.DifficultyReduction;
-        public override string Description => @"Spinners will be automatically completed.";
+        public override string Description => "自动完成转盘。";
         public override double ScoreMultiplier => 0.9;
         public override bool Ranked => true;
         public override Type[] IncompatibleMods => new[] { typeof(ModAutoplay), typeof(OsuModAutopilot) };

@@ -20,28 +20,28 @@ namespace osu.Game.Rulesets.Scoring
         /// This miss window should determine how early a hit can be before it is considered for judgement (as opposed to being ignored as
         /// "too far in the future). It should also define when a forced miss should be triggered (as a result of no user input in time).
         /// </remarks>
-        [Description(@"Miss")]
+        [Description("漏击")]
         Miss,
 
-        [Description(@"Meh")]
+        [Description("勉强")]
         Meh,
 
         /// <summary>
         /// Optional judgement.
         /// </summary>
-        [Description(@"OK")]
+        [Description("尚可")]
         Ok,
 
-        [Description(@"Good")]
+        [Description("良好")]
         Good,
 
-        [Description(@"Great")]
+        [Description("优秀")]
         Great,
 
         /// <summary>
         /// Optional judgement.
         /// </summary>
-        [Description(@"Perfect")]
+        [Description("完美")]
         Perfect,
     }
 }

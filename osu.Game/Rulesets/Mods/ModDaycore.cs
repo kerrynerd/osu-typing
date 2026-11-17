@@ -9,10 +9,10 @@ namespace osu.Game.Rulesets.Mods
 {
     public abstract class ModDaycore : ModHalfTime
     {
-        public override string Name => "Daycore";
+        public override string Name => "降调减速";
         public override string Acronym => "DC";
         public override IconUsage Icon => FontAwesome.Solid.Question;
-        public override string Description => "Whoaaaaa...";
+        public override string Description => "慢下来，享受低沉的旋律……";
 
         public override void ApplyToClock(IAdjustableClock clock)
         {

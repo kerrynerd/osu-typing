@@ -4,14 +4,13 @@
 using osu.Game.Rulesets.Edit;
 using osu.Game.Rulesets.Edit.Tools;
 using osu.Game.Rulesets.Osu.Edit.Blueprints.Sliders;
-using osu.Game.Rulesets.Osu.Objects;
 
 namespace osu.Game.Rulesets.Osu.Edit
 {
     public class SliderCompositionTool : HitObjectCompositionTool
     {
         public SliderCompositionTool()
-            : base(nameof(Slider))
+            : base("滑条")
         {
         }
 

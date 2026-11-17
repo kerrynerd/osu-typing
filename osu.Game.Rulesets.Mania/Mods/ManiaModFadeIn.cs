@@ -11,11 +11,11 @@ namespace osu.Game.Rulesets.Mania.Mods
 {
     public class ManiaModFadeIn : Mod
     {
-        public override string Name => "Fade In";
+        public override string Name => "淡入";
         public override string Acronym => "FI";
         public override IconUsage Icon => OsuIcon.ModHidden;
         public override ModType Type => ModType.DifficultyIncrease;
-        public override string Description => @"Keys appear out of nowhere!";
+        public override string Description => "音符会突然出现！";
         public override double ScoreMultiplier => 1;
         public override bool Ranked => true;
         public override Type[] IncompatibleMods => new[] { typeof(ModFlashlight<ManiaHitObject>) };

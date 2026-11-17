@@ -268,8 +268,8 @@ namespace osu.Game.Screens.Menu
         {
             public ConfirmExitDialog(Action confirm, Action cancel)
             {
-                HeaderText = "Are you sure you want to exit?";
-                BodyText = "Last chance to back out.";
+                HeaderText = "确定要退出吗？";
+                BodyText = "还可以再玩一会儿。";
 
                 Icon = FontAwesome.Solid.ExclamationTriangle;
 
@@ -277,12 +277,12 @@ namespace osu.Game.Screens.Menu
                 {
                     new PopupDialogOkButton
                     {
-                        Text = @"Good bye",
+                        Text = "退出游戏",
                         Action = confirm
                     },
                     new PopupDialogCancelButton
                     {
-                        Text = @"Just a little more",
+                        Text = "再玩一会儿",
                         Action = cancel
                     },
                 };

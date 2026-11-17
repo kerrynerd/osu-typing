@@ -25,7 +25,7 @@ namespace osu.Game.Rulesets.Mania.Configuration
 
         public override TrackedSettings CreateTrackedSettings() => new TrackedSettings
         {
-            new TrackedSetting<double>(ManiaRulesetSetting.ScrollTime, v => new SettingDescription(v, "Scroll Time", $"{v}ms"))
+            new TrackedSetting<double>(ManiaRulesetSetting.ScrollTime, v => new SettingDescription(v, "滚动时间", $"{v}ms"))
         };
     }
 

@@ -7,6 +7,6 @@ namespace osu.Game.Rulesets.Taiko.Mods
 {
     public class TaikoModRelax : ModRelax
     {
-        public override string Description => @"No ninja-like spinners, demanding drumrolls or unexpected katu's.";
+        public override string Description => "自动处理转盘、连打和蓝色音符。";
     }
 }

@@ -83,7 +83,7 @@ namespace osu.Game.Overlays.Profile.Sections
                                     Anchor = Anchor.Centre,
                                     Origin = Anchor.Centre,
                                     Font = OsuFont.GetFont(size: 12, weight: FontWeight.Bold),
-                                    Text = "show more".ToUpper(),
+                                    Text = "显示更多".ToUpper(),
                                 },
                                 new ChevronIcon(),
                             }

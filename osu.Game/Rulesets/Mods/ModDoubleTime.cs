@@ -10,11 +10,11 @@ namespace osu.Game.Rulesets.Mods
 {
     public abstract class ModDoubleTime : ModTimeAdjust, IApplicableToClock
     {
-        public override string Name => "Double Time";
+        public override string Name => "加速";
         public override string Acronym => "DT";
         public override IconUsage Icon => OsuIcon.ModDoubletime;
         public override ModType Type => ModType.DifficultyIncrease;
-        public override string Description => "Zoooooooooom...";
+        public override string Description => "加速前进！";
         public override bool Ranked => true;
 
         public override Type[] IncompatibleMods => base.IncompatibleMods.Append(typeof(ModHalfTime)).ToArray();

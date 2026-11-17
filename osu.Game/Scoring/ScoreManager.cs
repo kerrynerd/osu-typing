@@ -27,6 +27,8 @@ namespace osu.Game.Scoring
 
         protected override string ImportFromStablePath => Path.Combine("Data", "r");
 
+        protected override string HumanisedModelName => "成绩";
+
         private readonly RulesetStore rulesets;
         private readonly Func<BeatmapManager> beatmaps;
 

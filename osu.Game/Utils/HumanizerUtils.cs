@@ -19,11 +19,11 @@ namespace osu.Game.Utils
             // this works around https://github.com/xamarin/xamarin-android/issues/2012 and https://github.com/Humanizr/Humanizer/issues/690#issuecomment-368536282
             try
             {
-                return input.Humanize();
+                return input.Humanize(culture: CultureInfo.GetCultureInfo("zh-CN"));
             }
             catch (ArgumentException)
             {
-                return input.Humanize(culture: new CultureInfo("en-US"));
+                return input.ToLocalTime().ToString("yyyy年M月d日 HH:mm", CultureInfo.InvariantCulture);
             }
         }
     }

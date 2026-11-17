@@ -127,7 +127,7 @@ namespace osu.Game.Overlays.Direct
                                         }).With(d =>
                                         {
                                             d.AutoSizeAxes = Axes.Both;
-                                            d.AddText("mapped by ", t => t.Colour = colours.Gray5);
+                                            d.AddText("谱师：", t => t.Colour = colours.Gray5);
                                             d.AddUserLink(SetInfo.Metadata.Author);
                                         }),
                                         new Container

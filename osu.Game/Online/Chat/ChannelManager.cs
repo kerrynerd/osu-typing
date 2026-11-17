@@ -123,7 +123,7 @@ namespace osu.Game.Online.Chat
             {
                 if (!api.IsLoggedIn)
                 {
-                    target.AddNewMessages(new ErrorMessage("Please sign in to participate in chat!"));
+                    target.AddNewMessages(new ErrorMessage("请先登录再参与聊天！"));
                     return;
                 }
 
@@ -206,7 +206,7 @@ namespace osu.Game.Online.Chat
                 case "me":
                     if (string.IsNullOrWhiteSpace(content))
                     {
-                        target.AddNewMessages(new ErrorMessage("Usage: /me [action]"));
+                        target.AddNewMessages(new ErrorMessage("用法：/me [动作]"));
                         break;
                     }
 
@@ -216,7 +216,7 @@ namespace osu.Game.Online.Chat
                 case "join":
                     if (string.IsNullOrWhiteSpace(content))
                     {
-                        target.AddNewMessages(new ErrorMessage("Usage: /join [channel]"));
+                        target.AddNewMessages(new ErrorMessage("用法：/join [频道]"));
                         break;
                     }
 
@@ -224,7 +224,7 @@ namespace osu.Game.Online.Chat
 
                     if (channel == null)
                     {
-                        target.AddNewMessages(new ErrorMessage($"Channel '{content}' not found."));
+                        target.AddNewMessages(new ErrorMessage($"未找到频道“{content}”。"));
                         break;
                     }
 
@@ -233,11 +233,11 @@ namespace osu.Game.Online.Chat
                     break;
 
                 case "help":
-                    target.AddNewMessages(new InfoMessage("Supported commands: /help, /me [action], /join [channel]"));
+                    target.AddNewMessages(new InfoMessage("支持的命令：/help、/me [动作]、/join [频道]"));
                     break;
 
                 default:
-                    target.AddNewMessages(new ErrorMessage($@"""/{command}"" is not supported! For a list of supported commands see /help"));
+                    target.AddNewMessages(new ErrorMessage($"不支持 /{command}！输入 /help 查看支持的命令。"));
                     break;
             }
         }

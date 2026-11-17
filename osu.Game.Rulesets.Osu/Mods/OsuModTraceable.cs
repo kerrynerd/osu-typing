@@ -16,11 +16,11 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     internal class OsuModTraceable : Mod, IReadFromConfig, IApplicableToDrawableHitObjects
     {
-        public override string Name => "Traceable";
+        public override string Name => "循迹";
         public override string Acronym => "TC";
         public override IconUsage Icon => FontAwesome.Brands.SnapchatGhost;
         public override ModType Type => ModType.Fun;
-        public override string Description => "Put your faith in the approach circles...";
+        public override string Description => "相信缩圈指引的方向……";
         public override double ScoreMultiplier => 1;
 
         public override Type[] IncompatibleMods => new[] { typeof(OsuModHidden), typeof(OsuModSpinIn), typeof(OsuModeObjectScaleTween) };

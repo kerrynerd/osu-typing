@@ -15,11 +15,11 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     internal class OsuModWiggle : Mod, IApplicableToDrawableHitObjects
     {
-        public override string Name => "Wiggle";
+        public override string Name => "摇摆";
         public override string Acronym => "WG";
         public override IconUsage Icon => FontAwesome.Solid.Certificate;
         public override ModType Type => ModType.Fun;
-        public override string Description => "They just won't stay still...";
+        public override string Description => "它们就是停不下来……";
         public override double ScoreMultiplier => 1;
         public override Type[] IncompatibleMods => new[] { typeof(OsuModTransform) };
 

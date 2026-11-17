@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using osu.Framework.Bindables;
@@ -464,7 +465,9 @@ namespace osu.Game.Rulesets.Scoring
 
     public enum ScoringMode
     {
+        [Description("标准化")]
         Standardised,
+        [Description("经典")]
         Classic
     }
 }

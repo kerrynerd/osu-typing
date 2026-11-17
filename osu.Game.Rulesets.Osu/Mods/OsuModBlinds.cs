@@ -20,8 +20,8 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     public class OsuModBlinds : Mod, IApplicableToDrawableRuleset<OsuHitObject>, IApplicableToScoreProcessor
     {
-        public override string Name => "Blinds";
-        public override string Description => "Play with blinds on your screen.";
+        public override string Name => "百叶窗";
+        public override string Description => "在百叶窗遮挡下游玩。";
         public override string Acronym => "BL";
 
         public override IconUsage Icon => FontAwesome.Solid.Adjust;

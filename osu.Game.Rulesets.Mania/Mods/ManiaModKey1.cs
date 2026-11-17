@@ -6,8 +6,8 @@ namespace osu.Game.Rulesets.Mania.Mods
     public class ManiaModKey1 : ManiaKeyMod
     {
         public override int KeyCount => 1;
-        public override string Name => "One Key";
+        public override string Name => "单键";
         public override string Acronym => "1K";
-        public override string Description => @"Play with one key.";
+        public override string Description => "使用一个按键游玩。";
     }
 }

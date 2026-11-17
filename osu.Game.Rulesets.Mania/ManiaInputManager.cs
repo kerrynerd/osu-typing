@@ -17,66 +17,66 @@ namespace osu.Game.Rulesets.Mania
 
     public enum ManiaAction
     {
-        [Description("Special 1")]
+        [Description("特殊键 1")]
         Special1 = 1,
 
-        [Description("Special 2")]
+        [Description("特殊键 2")]
         Special2,
 
         // This offsets the start value of normal keys in-case we add more special keys
         // above at a later time, without breaking replays/configs.
-        [Description("Key 1")]
+        [Description("按键 1")]
         Key1 = 10,
 
-        [Description("Key 2")]
+        [Description("按键 2")]
         Key2,
 
-        [Description("Key 3")]
+        [Description("按键 3")]
         Key3,
 
-        [Description("Key 4")]
+        [Description("按键 4")]
         Key4,
 
-        [Description("Key 5")]
+        [Description("按键 5")]
         Key5,
 
-        [Description("Key 6")]
+        [Description("按键 6")]
         Key6,
 
-        [Description("Key 7")]
+        [Description("按键 7")]
         Key7,
 
-        [Description("Key 8")]
+        [Description("按键 8")]
         Key8,
 
-        [Description("Key 9")]
+        [Description("按键 9")]
         Key9,
 
-        [Description("Key 10")]
+        [Description("按键 10")]
         Key10,
 
-        [Description("Key 11")]
+        [Description("按键 11")]
         Key11,
 
-        [Description("Key 12")]
+        [Description("按键 12")]
         Key12,
 
-        [Description("Key 13")]
+        [Description("按键 13")]
         Key13,
 
-        [Description("Key 14")]
+        [Description("按键 14")]
         Key14,
 
-        [Description("Key 15")]
+        [Description("按键 15")]
         Key15,
 
-        [Description("Key 16")]
+        [Description("按键 16")]
         Key16,
 
-        [Description("Key 17")]
+        [Description("按键 17")]
         Key17,
 
-        [Description("Key 18")]
+        [Description("按键 18")]
         Key18,
     }
 }

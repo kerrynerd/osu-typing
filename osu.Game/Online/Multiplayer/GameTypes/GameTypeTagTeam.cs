@@ -11,7 +11,7 @@ namespace osu.Game.Online.Multiplayer.GameTypes
 {
     public class GameTypeTagTeam : GameType
     {
-        public override string Name => "Tag Team";
+        public override string Name => "接力赛";
 
         public override Drawable GetIcon(OsuColour colours, float size)
         {

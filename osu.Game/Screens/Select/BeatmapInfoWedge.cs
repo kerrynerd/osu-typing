@@ -301,7 +301,7 @@ namespace osu.Game.Screens.Select
                 {
                     labels.Add(new InfoLabel(new BeatmapStatistic
                     {
-                        Name = "Length",
+                        Name = "时长",
                         Icon = FontAwesome.Regular.Clock,
                         Content = TimeSpan.FromMilliseconds(b.BeatmapInfo.Length).ToString(@"m\:ss"),
                     }));
@@ -340,7 +340,7 @@ namespace osu.Game.Screens.Select
                 if (Precision.AlmostEquals(bpmMin, bpmMax))
                     return $"{bpmMin:0}";
 
-                return $"{bpmMin:0}-{bpmMax:0} (mostly {beatmap.ControlPointInfo.BPMMode:0})";
+                return $"{bpmMin:0}-{bpmMax:0}（主要为 {beatmap.ControlPointInfo.BPMMode:0}）";
             }
 
             private OsuSpriteText[] getMapper(BeatmapMetadata metadata)
@@ -352,7 +352,7 @@ namespace osu.Game.Screens.Select
                 {
                     new OsuSpriteText
                     {
-                        Text = "mapped by ",
+                        Text = "谱师：",
                         Font = OsuFont.GetFont(size: 15),
                     },
                     new OsuSpriteText

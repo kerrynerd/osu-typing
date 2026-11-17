@@ -81,7 +81,7 @@ namespace osu.Game.Tournament.Screens.Schedule
                             Direction = FillDirection.Horizontal,
                             Children = new Drawable[]
                             {
-                                new ScheduleContainer("recent matches")
+                                new ScheduleContainer("近期比赛")
                                 {
                                     RelativeSizeAxes = Axes.Both,
                                     Width = 0.4f,
@@ -92,7 +92,7 @@ namespace osu.Game.Tournament.Screens.Schedule
                                                                .Take(8)
                                                                .Select(p => new ScheduleMatch(p))
                                 },
-                                new ScheduleContainer("match overview")
+                                new ScheduleContainer("比赛概览")
                                 {
                                     RelativeSizeAxes = Axes.Both,
                                     Width = 0.6f,
@@ -101,7 +101,7 @@ namespace osu.Game.Tournament.Screens.Schedule
                             }
                         }
                     },
-                    new ScheduleContainer("current match")
+                    new ScheduleContainer("当前比赛")
                     {
                         RelativeSizeAxes = Axes.Both,
                         Height = 0.25f,
@@ -118,7 +118,7 @@ namespace osu.Game.Tournament.Screens.Schedule
                             new ScheduleMatch(match.NewValue, false),
                             new OsuSpriteText
                             {
-                                Text = "Start Time " + match.NewValue.Date.Value.ToUniversalTime().ToString("HH:mm UTC"),
+                                Text = "开始时间 " + match.NewValue.Date.Value.ToUniversalTime().ToString("HH:mm UTC"),
                                 Colour = Color4.Black,
                                 Font = OsuFont.GetFont(size: 20)
                             },
@@ -157,7 +157,7 @@ namespace osu.Game.Tournament.Screens.Schedule
                         Colour = Color4.Black,
                         Alpha = conditional ? 0.6f : 1,
                         Margin = new MarginPadding { Horizontal = 10, Vertical = 5 },
-                        Text = match.Date.Value.ToUniversalTime().ToString("HH:mm UTC") + (conditional ? " (conditional)" : "")
+                        Text = match.Date.Value.ToUniversalTime().ToString("HH:mm UTC") + (conditional ? "（有条件进行）" : "")
                     });
                 }
             }

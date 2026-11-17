@@ -7,13 +7,13 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     internal class OsuModGrow : OsuModeObjectScaleTween
     {
-        public override string Name => "Grow";
+        public override string Name => "放大";
 
         public override string Acronym => "GR";
 
         public override IconUsage Icon => FontAwesome.Solid.ArrowsAltV;
 
-        public override string Description => "Hit them at the right size!";
+        public override string Description => "在大小合适时击打！";
 
         protected override float StartScale => 0.5f;
     }

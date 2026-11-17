@@ -83,7 +83,7 @@ namespace osu.Game.Overlays.Changelog
 
                     existing.Add(new OsuSpriteText
                     {
-                        Text = Build.CreatedAt.Date.ToString("dd MMM yyyy"),
+                        Text = Build.CreatedAt.Date.ToString("yyyy年M月d日"),
                         Font = OsuFont.GetFont(weight: FontWeight.Regular, size: 14),
                         Colour = OsuColour.FromHex(@"FD5"),
                         Anchor = Anchor.BottomCentre,

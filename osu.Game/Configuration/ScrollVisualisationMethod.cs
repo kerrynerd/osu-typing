@@ -7,13 +7,13 @@ namespace osu.Game.Configuration
 {
     public enum ScrollVisualisationMethod
     {
-        [Description("Sequential")]
+        [Description("依次排列")]
         Sequential,
 
-        [Description("Overlapping")]
+        [Description("重叠")]
         Overlapping,
 
-        [Description("Constant")]
+        [Description("恒定")]
         Constant
     }
 }

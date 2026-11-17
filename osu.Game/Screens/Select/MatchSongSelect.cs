@@ -18,7 +18,7 @@ namespace osu.Game.Screens.Select
     {
         public Action<PlaylistItem> Selected;
 
-        public string ShortTitle => "song selection";
+        public string ShortTitle => "选择歌曲";
         public override string Title => ShortTitle.Humanize();
 
         [Resolved(typeof(Room))]

@@ -21,7 +21,7 @@ namespace osu.Game.Overlays.Notifications
             set => Schedule(() => textDrawable.Text = value);
         }
 
-        public string CompletionText { get; set; } = "Task has completed!";
+        public string CompletionText { get; set; } = "任务已完成！";
 
         private float progress;
 

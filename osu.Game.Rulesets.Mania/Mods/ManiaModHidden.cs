@@ -9,7 +9,7 @@ namespace osu.Game.Rulesets.Mania.Mods
 {
     public class ManiaModHidden : ModHidden
     {
-        public override string Description => @"Keys fade out before you hit them!";
+        public override string Description => "音符会在击打前消失！";
         public override double ScoreMultiplier => 1;
         public override Type[] IncompatibleMods => new[] { typeof(ModFlashlight<ManiaHitObject>) };
     }

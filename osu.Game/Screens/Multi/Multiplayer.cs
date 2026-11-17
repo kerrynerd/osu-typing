@@ -110,10 +110,10 @@ namespace osu.Game.Screens.Multi
                             Top = 10,
                             Right = 10 + HORIZONTAL_OVERFLOW_PADDING,
                         },
-                        Text = "Create room",
+                        Text = "创建房间",
                         Action = () => loungeSubScreen.Open(new Room
                         {
-                            Name = { Value = $"{api.LocalUser}'s awesome room" }
+                            Name = { Value = $"{api.LocalUser} 的房间" }
                         }),
                     },
                     roomManager = new RoomManager()

@@ -9,11 +9,11 @@ namespace osu.Game.Rulesets.Osu.Mods
 {
     public class OsuModTarget : Mod
     {
-        public override string Name => "Target";
+        public override string Name => "节奏练习";
         public override string Acronym => "TP";
         public override ModType Type => ModType.Conversion;
         public override IconUsage Icon => OsuIcon.ModTarget;
-        public override string Description => @"Practice keeping up with the beat of the song.";
+        public override string Description => "练习跟上歌曲的节奏。";
         public override double ScoreMultiplier => 1;
     }
 }

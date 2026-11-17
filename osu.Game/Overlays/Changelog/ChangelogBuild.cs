@@ -123,7 +123,7 @@ namespace osu.Game.Overlays.Changelog
                         });
                     }
 
-                    title.AddText(" by ", t =>
+                    title.AddText(" 作者：", t =>
                     {
                         t.Font = fontMedium;
                         t.Colour = entryColour;

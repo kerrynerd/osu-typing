@@ -46,8 +46,8 @@ namespace osu.Game.Updater
                 {
                     Notifications.Post(new SimpleNotification
                     {
-                        Text = $"A newer release of osu! has been found ({version} → {latest.TagName}).\n\n"
-                               + "Click here to download the new version, which can be installed over the top of your existing installation",
+                        Text = $"发现 osu! 新版本（{version} → {latest.TagName}）。\n\n"
+                               + "点击下载新版本，可直接覆盖现有安装",
                         Icon = FontAwesome.Solid.Upload,
                         Activated = () =>
                         {

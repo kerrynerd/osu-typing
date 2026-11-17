@@ -1,7 +1,6 @@
 ﻿// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
-using Humanizer;
 using osu.Framework.Allocation;
 using osu.Framework.Audio;
 using osu.Framework.Audio.Sample;
@@ -67,7 +66,7 @@ namespace osu.Game.Overlays.Changelog
                             },
                             new OsuSpriteText
                             {
-                                Text = stream.LatestBuild.Users > 0 ? $"{stream.LatestBuild.Users:N0} {"user".Pluralize(stream.LatestBuild.Users == 1)} online" : null,
+                                Text = stream.LatestBuild.Users > 0 ? $"{stream.LatestBuild.Users:N0} 位玩家在线" : null,
                                 Font = OsuFont.GetFont(weight: FontWeight.Regular, size: 10),
                                 Colour = new Color4(203, 164, 218, 255),
                             },

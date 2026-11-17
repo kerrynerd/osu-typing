@@ -95,7 +95,7 @@ namespace osu.Game.Tournament.Screens.Drawings.Components
             {
                 if (g != groups.First())
                     sb.AppendLine();
-                sb.AppendLine($"Group {g.GroupName}");
+                sb.AppendLine($"分组 {g.GroupName}");
                 sb.Append(g.GetStringRepresentation());
             }
 

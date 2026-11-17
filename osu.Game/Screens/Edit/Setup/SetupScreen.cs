@@ -7,7 +7,7 @@ namespace osu.Game.Screens.Edit.Setup
     {
         public SetupScreen()
         {
-            Child = new ScreenWhiteBox.UnderConstructionMessage("Setup mode");
+            Child = new ScreenWhiteBox.UnderConstructionMessage("设置模式");
         }
     }
 }

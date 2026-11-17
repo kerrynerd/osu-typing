@@ -45,7 +45,7 @@ namespace osu.Game.Overlays.Profile.Sections.Ranks
         {
             var text = new OsuSpriteText
             {
-                Text = $"accuracy: {Score.Accuracy:P2}",
+                Text = $"准确率：{Score.Accuracy:P2}",
                 Anchor = Anchor.TopRight,
                 Origin = Anchor.TopRight,
                 Colour = colour.GrayA,

@@ -78,10 +78,10 @@ namespace osu.Game.Overlays.Profile.Header
             if (user == null) return;
 
             if (user.JoinDate.ToUniversalTime().Year < 2008)
-                topLinkContainer.AddText("Here since the beginning");
+                topLinkContainer.AddText("最早的一批玩家");
             else
             {
-                topLinkContainer.AddText("Joined ");
+                topLinkContainer.AddText("注册于");
                 topLinkContainer.AddText(new DrawableDate(user.JoinDate), embolden);
             }
 
@@ -89,12 +89,12 @@ namespace osu.Game.Overlays.Profile.Header
 
             if (user.IsOnline)
             {
-                topLinkContainer.AddText("Currently online");
+                topLinkContainer.AddText("当前在线");
                 addSpacer(topLinkContainer);
             }
             else if (user.LastVisit.HasValue)
             {
-                topLinkContainer.AddText("Last seen ");
+                topLinkContainer.AddText("上次在线：");
                 topLinkContainer.AddText(new DrawableDate(user.LastVisit.Value), embolden);
 
                 addSpacer(topLinkContainer);
@@ -102,14 +102,14 @@ namespace osu.Game.Overlays.Profile.Header
 
             if (user.PlayStyles?.Length > 0)
             {
-                topLinkContainer.AddText("Plays with ");
+                topLinkContainer.AddText("输入设备：");
                 topLinkContainer.AddText(string.Join(", ", user.PlayStyles.Select(style => style.GetDescription())), embolden);
 
                 addSpacer(topLinkContainer);
             }
 
-            topLinkContainer.AddText("Contributed ");
-            topLinkContainer.AddLink($@"{user.PostCount:#,##0} forum posts", $"https://osu.ppy.sh/users/{user.Id}/posts", creationParameters: embolden);
+            topLinkContainer.AddText("已发布");
+            topLinkContainer.AddLink($@"{user.PostCount:#,##0} 篇论坛帖子", $"https://osu.ppy.sh/users/{user.Id}/posts", creationParameters: embolden);
 
             string websiteWithoutProtcol = user.Website;
 

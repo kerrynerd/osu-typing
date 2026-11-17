@@ -9,9 +9,9 @@ namespace osu.Game.Rulesets.Mods
 {
     public class ModWindDown : ModTimeRamp
     {
-        public override string Name => "Wind Down";
+        public override string Name => "渐慢";
         public override string Acronym => "WD";
-        public override string Description => "Sloooow doooown...";
+        public override string Description => "速度逐渐变慢……";
         public override IconUsage Icon => FontAwesome.Solid.ChevronCircleDown;
         public override double ScoreMultiplier => 1.0;
 

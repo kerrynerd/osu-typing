@@ -8,7 +8,7 @@ namespace osu.Game.Rulesets.Mods
     /// </summary>
     public sealed class ModNoMod : Mod
     {
-        public override string Name => "No Mod";
+        public override string Name => "无模组";
         public override string Acronym => "NM";
         public override double ScoreMultiplier => 1;
     }

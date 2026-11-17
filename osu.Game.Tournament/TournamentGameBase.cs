@@ -78,7 +78,7 @@ namespace osu.Game.Tournament
             {
                 new OsuButton
                 {
-                    Text = "Save Changes",
+                    Text = "保存更改",
                     Width = 140,
                     Height = 50,
                     Depth = float.MinValue,
@@ -104,7 +104,7 @@ namespace osu.Game.Tournament
                         },
                         new SpriteText
                         {
-                            Text = "Please make the window wider",
+                            Text = "请加宽窗口",
                             Font = OsuFont.Default.With(weight: "bold"),
                             Colour = Color4.White,
                             Padding = new MarginPadding(20)

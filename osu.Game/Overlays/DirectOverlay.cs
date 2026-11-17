@@ -4,7 +4,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Humanizer;
 using osu.Framework.Allocation;
 using osu.Framework.Bindables;
 using osu.Framework.Graphics;
@@ -103,7 +102,7 @@ namespace osu.Game.Overlays
                     {
                         new OsuSpriteText
                         {
-                            Text = "Found ",
+                            Text = "找到",
                             Font = OsuFont.GetFont(size: 15)
                         },
                         resultCountsText = new OsuSpriteText
@@ -174,9 +173,7 @@ namespace osu.Game.Overlays
             resultCountsContainer.FadeTo(ResultAmounts == null ? 0f : 1f, 200, Easing.OutQuint);
             if (ResultAmounts == null) return;
 
-            resultCountsText.Text = "Artist".ToQuantity(ResultAmounts.Artists) + ", " +
-                                    "Song".ToQuantity(ResultAmounts.Songs) + ", " +
-                                    "Tag".ToQuantity(ResultAmounts.Tags);
+            resultCountsText.Text = $"{ResultAmounts.Artists} 位艺术家，{ResultAmounts.Songs} 首歌曲，{ResultAmounts.Tags} 个标签";
         }
 
         private void recreatePanels(PanelDisplayStyle displayStyle)

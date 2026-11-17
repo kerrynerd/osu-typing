@@ -25,7 +25,7 @@ namespace osu.Game.Overlays.Profile.Header.Components
 
         public LevelProgressBar()
         {
-            TooltipText = "Progress to next level";
+            TooltipText = "距离下一级的进度";
         }
 
         [BackgroundDependencyLoader]

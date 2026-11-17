@@ -168,7 +168,7 @@ namespace osu.Game.Overlays.Profile.Header
             usernameText.Text = user?.Username ?? string.Empty;
             openUserExternally.Link = $@"https://osu.ppy.sh/users/{user?.Id ?? 0}";
             userFlag.Country = user?.Country;
-            userCountryText.Text = user?.Country?.FullName ?? "Alien";
+            userCountryText.Text = user?.Country?.FullName ?? "未知地区";
             supporterTag.SupportLevel = user?.SupportLevel ?? 0;
             titleText.Text = user?.Title ?? string.Empty;
             titleText.Colour = OsuColour.FromHex(user?.Colour ?? "fff");
@@ -177,13 +177,13 @@ namespace osu.Game.Overlays.Profile.Header
 
             if (user?.Statistics != null)
             {
-                userStats.Add(new UserStatsLine("Ranked Score", user.Statistics.RankedScore.ToString("#,##0")));
-                userStats.Add(new UserStatsLine("Hit Accuracy", Math.Round(user.Statistics.Accuracy, 2).ToString("#0.00'%'")));
-                userStats.Add(new UserStatsLine("Play Count", user.Statistics.PlayCount.ToString("#,##0")));
-                userStats.Add(new UserStatsLine("Total Score", user.Statistics.TotalScore.ToString("#,##0")));
-                userStats.Add(new UserStatsLine("Total Hits", user.Statistics.TotalHits.ToString("#,##0")));
-                userStats.Add(new UserStatsLine("Maximum Combo", user.Statistics.MaxCombo.ToString("#,##0")));
-                userStats.Add(new UserStatsLine("Replays Watched by Others", user.Statistics.ReplaysWatched.ToString("#,##0")));
+                userStats.Add(new UserStatsLine("排名总分", user.Statistics.RankedScore.ToString("#,##0")));
+                userStats.Add(new UserStatsLine("击打准确率", Math.Round(user.Statistics.Accuracy, 2).ToString("#0.00'%'")));
+                userStats.Add(new UserStatsLine("游玩次数", user.Statistics.PlayCount.ToString("#,##0")));
+                userStats.Add(new UserStatsLine("总分", user.Statistics.TotalScore.ToString("#,##0")));
+                userStats.Add(new UserStatsLine("总击打次数", user.Statistics.TotalHits.ToString("#,##0")));
+                userStats.Add(new UserStatsLine("最大连击", user.Statistics.MaxCombo.ToString("#,##0")));
+                userStats.Add(new UserStatsLine("回放被观看次数", user.Statistics.ReplaysWatched.ToString("#,##0")));
             }
         }
 

@@ -11,20 +11,20 @@ namespace osu.Game.Overlays.Settings.Sections.Maintenance
     {
         public DeleteAllBeatmapsDialog(Action deleteAction)
         {
-            BodyText = "Everything?";
+            BodyText = "全部内容？";
 
             Icon = FontAwesome.Regular.TrashAlt;
-            HeaderText = @"Confirm deletion of";
+            HeaderText = "确认删除";
             Buttons = new PopupDialogButton[]
             {
                 new PopupDialogOkButton
                 {
-                    Text = @"Yes. Go for it.",
+                    Text = "确认删除",
                     Action = deleteAction
                 },
                 new PopupDialogCancelButton
                 {
-                    Text = @"No! Abort mission!",
+                    Text = "取消",
                 },
             };
         }

@@ -8,7 +8,7 @@ namespace osu.Game.Overlays.Settings.Sections.Gameplay
 {
     public class ModsSettings : SettingsSubsection
     {
-        protected override string Header => "Mods";
+        protected override string Header => "模组";
 
         [BackgroundDependencyLoader]
         private void load(OsuConfigManager config)
@@ -17,7 +17,7 @@ namespace osu.Game.Overlays.Settings.Sections.Gameplay
             {
                 new SettingsCheckbox
                 {
-                    LabelText = "Increase visibility of first object when visual impairment mods are enabled",
+                    LabelText = "启用影响视野的模组时，提高第一个物件的可见度",
                     Bindable = config.GetBindable<bool>(OsuSetting.IncreaseFirstObjectVisibility)
                 },
             };

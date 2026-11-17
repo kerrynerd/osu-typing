@@ -72,69 +72,69 @@ namespace osu.Game.Input.Bindings
 
     public enum GlobalAction
     {
-        [Description("Toggle chat overlay")]
+        [Description("显示或隐藏聊天面板")]
         ToggleChat,
 
-        [Description("Toggle social overlay")]
+        [Description("显示或隐藏玩家列表")]
         ToggleSocial,
 
-        [Description("Reset input settings")]
+        [Description("重置输入设置")]
         ResetInputSettings,
 
-        [Description("Toggle toolbar")]
+        [Description("显示或隐藏工具栏")]
         ToggleToolbar,
 
-        [Description("Toggle settings")]
+        [Description("显示或隐藏设置")]
         ToggleSettings,
 
-        [Description("Toggle osu!direct")]
+        [Description("显示或隐藏谱面下载")]
         ToggleDirect,
 
-        [Description("Increase volume")]
+        [Description("提高音量")]
         IncreaseVolume,
 
-        [Description("Decrease volume")]
+        [Description("降低音量")]
         DecreaseVolume,
 
-        [Description("Toggle mute")]
+        [Description("切换静音")]
         ToggleMute,
 
         // In-Game Keybindings
-        [Description("Skip cutscene")]
+        [Description("跳过过场动画")]
         SkipCutscene,
 
-        [Description("Quick retry (hold)")]
+        [Description("快速重试（长按）")]
         QuickRetry,
 
-        [Description("Take screenshot")]
+        [Description("截图")]
         TakeScreenshot,
 
-        [Description("Toggle gameplay mouse buttons")]
+        [Description("启用或禁用游戏内鼠标按键")]
         ToggleGameplayMouseButtons,
 
-        [Description("Back")]
+        [Description("返回")]
         Back,
 
-        [Description("Increase scroll speed")]
+        [Description("提高滚动速度")]
         IncreaseScrollSpeed,
 
-        [Description("Decrease scroll speed")]
+        [Description("降低滚动速度")]
         DecreaseScrollSpeed,
 
-        [Description("Select")]
+        [Description("选择")]
         Select,
 
-        [Description("Quick exit (Hold)")]
+        [Description("快速退出（长按）")]
         QuickExit,
 
         // Game-wide beatmap msi ccotolle keybindings
-        [Description("Next track")]
+        [Description("下一首")]
         MusicNext,
 
-        [Description("Previous track")]
+        [Description("上一首")]
         MusicPrev,
 
-        [Description("Play / pause")]
+        [Description("播放／暂停")]
         MusicPlay,
     }
 }
